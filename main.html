@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Element Playground</title>
+    <link rel="stylesheet" href="style.css">  
+    <head><script src="script.js" defer></script></head>
+</head>
+<body>
+
+    <header>
+        <h1>Element Playground</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJftvGvDCBChmLZsSxqZNCtSFtKxwhZLFXnXsvDBLQKjWMqjPdpvFsjrBnsgMpsSPvKQMbq">Contact</a>
+        </nav>
+    </header>
+
+
+    <main>  </main>
+    <div class="wrapper">
+        <main></main>
+        <section> </section>
+        <section> </section>
+        <section>
+            <h2>Canvas Fun</h2>
+            <canvas id="myCanvas" width="300" height="200"></canvas>
+            <script>
+                var canvas = document.getElementById('myCanvas');
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'rgb(200, 0, 0)'; // example fill style
+                ctx.fillRect(10, 10, 50, 50); // example drawing
+                // Add more canvas drawing code here!
+            </script>
+
+        </section>
+
+
+
+
+    </main>
+
+    <aside>
+        <h2>Aside Content</h2>
+        <p>This is some content in the aside.</p>
+        <div class="svg-container">
+            <svg width="200" height="200">
+                <circle cx="100" cy="100" r="80" fill="yellow" />
+                <rect x="50" y="50" width="100" height="50" fill="green" />
+                <!-- Add more SVG elements -->
+            </svg>
+        </div>
+    </aside>
+
+    <section>
+        <h2>Multimedia</h2>
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Text Formatting</h2>
+        <p>This is <sup>superscript</sup> and <sub>subscript</sub> text.</p>
+        <p><abbr title="HyperText Markup Language">HTML</abbr> is fun!</p>
+        <blockquote cite="https://www.example.com">This is a quote.</blockquote>
+        <pre>This is preformatted text.</pre>  <!-- Added preformatted text -->
+        <kbd>Ctrl + S</kbd> to save.  <!-- Added keyboard input -->
+    </section>
+
+
+
+
+        <h2>Interactive Elements</h2>
+    <details open> <summary>Open Details</summary>  </details>
+
+
+    <dialog open>
+        This is a dialog box.
+        <button onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+    <section>
+        <h2>More Input Types</h2>
+        <input type="color" value="#ff0000">
+        <input type="date">
+        <input type="range" min="0" max="100" value="50">
+    </section>
+
+
+
+
+    <footer>
+        <p>© 2025 Your Website</p>
+    </footer>
+
+</body>
+</html>

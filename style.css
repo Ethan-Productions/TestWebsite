@@ -1,0 +1,48 @@
+/* Basic Styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Use a wrapper to manage the layout */
+.wrapper {
+    flex: 1;  /* Allow main content and sections to expand */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+ }
+
+header, footer {  /* header/footer NOT in flexible area*/
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+/* ... (Previous CSS) ... */
+
+aside {
+    float: right; /* or display: inline-block; */
+    width: 30%; /* Adjust as needed */
+    padding: 10px;
+    border: 1px solid #ccc;  /* Adds a border around the aside */
+  }
+  
+  .svg-container {
+      width: 100%; /* Make sure SVG scales to fit */
+      height: auto; /* Maintain aspect ratio */
+  }
+  .wrapper {
+    display: flex;
+  }
+  
+  main {
+    flex: 1; /* Allow main content to take up remaining space */
+  }
+  
+  /*Adjust wrapper padding*/
+  .wrapper {
+      padding: 20px 20px 20px 0; /* Add right padding for the aside */
+  }
+/* ... (rest of the CSS: nav, section, table, form, dialog, switch, etc. are the SAME as the previous response) */
