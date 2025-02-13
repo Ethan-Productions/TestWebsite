@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ctx.fillStyle = 'rgb(200, 0, 0)';  // Red
     ctx.fillRect(10, 10, 50, 50);       // Filled red rectangle
 
-    ctx.fillStyle = 'rgba(0, 0, 200, 0.5)'; // Blue with alpha (transparency)
+    ctx.fillStyle = 'rgba(0, 0, 200, 0.25)'; // Blue with alpha (transparency)
     ctx.fillRect(70, 10, 50, 50);       // Filled blue rectangle
 
     ctx.beginPath();                      // Start a new path
