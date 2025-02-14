@@ -12,17 +12,28 @@
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="https://mail.google.com/mail/u/0/#inbox">Contact</a>
+            <button id="darkModeToggle">Dark Mode</button>
         </nav>
     </header>
 
     <div class="wrapper">
         <main>
-            <section>
+            <section id="welcome">
                 <h2>Welcome to the Playground!</h2>
-                <p>Experiment with different HTML elements and see how they work.</p>
+                <p>Experiment with different HTML elements. Can you find the <span id="konami-code-display" style="display: none;">🥚</span> easter egg?</p>
             </section>
 
-            <section>
+            <section id="draggable">
+                <h2>Draggable Box</h2>
+                <div id="draggable-box">Drag me!</div>
+            </section>
+
+            <section id="clock">
+                <h2>Functional Clock</h2>
+                <div id="current-time"></div>
+            </section>
+
+            <section id="canvas-fun">
                 <h2>Canvas Fun</h2>
                 <canvas id="myCanvas" width="300" height="200"></canvas>
                 <script>
@@ -34,7 +45,7 @@
                 </script>
             </section>
 
-            <section>
+            <section id="multimedia">
                 <h2>Multimedia</h2>
                 <audio controls>
                     <source src="audio.mp3" type="audio/mpeg">
@@ -44,7 +55,8 @@
                 </video>
             </section>
 
-            <section>
+
+            <section id="text-formatting">
                 <h2>Text Formatting</h2>
                 <p>This is <sup>superscript</sup> and <sub>subscript</sub> text.</p>
                 <p><abbr title="HyperText Markup Language">HTML</abbr> is fun!</p>
@@ -56,7 +68,7 @@
                 <ins>Inserted text</ins>
             </section>
 
-            <section>
+            <section id="interactive-elements">
                 <h2>Interactive Elements</h2>
                 <details>
                     <summary>Open Details</summary>
@@ -71,30 +83,13 @@
 
                 <button onclick="alert('Hello!')">Click Me</button>
             </section>
-            <section>
-                <h2>Forms and Inputs</h2>
-                <form>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name"><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br><br>
-                    <textarea rows="4" cols="50">Enter text here...</textarea><br><br>
-                    <select>
-                        <option value="option1">Option 1</option>
-                        <option value="option2">Option 2</option>
-                    </select><br><br>
-                    <input type="checkbox" id="checkbox" name="checkbox">
-                    <label for="checkbox">Checkbox</label><br><br>
-                    <input type="radio" id="radio1" name="radio" value="radio1">
-                    <label for="radio1">Radio 1</label><br>
-                    <input type="radio" id="radio2" name="radio" value="radio2">
-                    <label for="radio2">Radio 2</label><br><br>
-                    <input type="submit" value="Submit"> <input type="color"> <input type="date"> <input type="range">
-                    <progress value="70" max="100">70%</progress>
 
-                </form>
+            <section id="forms-inputs">
+                <h2>Forms and Inputs</h2>
+                 <form> <label for="name">Name:</label> <input type="text" id="name" name="name"><br><br> <label for="email">Email:</label> <input type="email" id="email" name="email"><br><br> <textarea rows="4" cols="50">Enter text here...</textarea><br><br> <select> <option value="option1">Option 1</option> <option value="option2">Option 2</option> </select><br><br> <input type="checkbox" id="checkbox" name="checkbox"> <label for="checkbox">Checkbox</label><br><br> <input type="radio" id="radio1" name="radio" value="radio1"> <label for="radio1">Radio 1</label><br> <input type="radio" id="radio2" name="radio" value="radio2"> <label for="radio2">Radio 2</label><br><br> <input type="submit" value="Submit"> <input type="color"> <input type="date"> <input type="range"> <progress value="70" max="100">70%</progress> </form>
             </section>
-            <section>
+
+            <section id="lists">
                 <h2>Lists</h2>
                 <ul>
                     <li>Unordered list item 1</li>
@@ -110,9 +105,9 @@
                     <dt>Description Term 2</dt>
                     <dd>Description details 2</dd>
                 </dl>
-
             </section>
-             <section>
+
+            <section id="tables">
                 <h2>Tables</h2>
                 <table>
                   <thead>
@@ -133,37 +128,30 @@
                   </tbody>
                 </table>
             </section>
-            
 
-            <section>
+            <section id="iframes">
                 <h2>IFrames</h2>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </section>
-
-
-
         </main>
 
         <aside>
-          <h2>Aside Content</h2>
-          <p>This is some content in the aside. You can put navigation, related links, or other supplementary information here.</p>
+            <h2>Aside Content</h2>
+            <p>This is some content in the aside. You can put navigation, related links, or other supplementary information here.</p>
 
-          <nav>
-              <ul>
-                  <li><a href="#canvas-fun">Canvas Fun</a></li>
-                  <li><a href="#multimedia">Multimedia</a></li>
-                  <li><a href="#text-formatting">Text Formatting</a></li>
-                  <!-- Add more links to other sections as needed -->
-              </ul>
-          </nav>
-           <div class="svg-container">
+            <nav>
+                <ul>
+                    <li><a href="#canvas-fun">Canvas Fun</a></li>
+                    <li><a href="#multimedia">Multimedia</a></li>
+                    <li><a href="#text-formatting">Text Formatting</a></li>
+                    <!-- Add more links to other sections as needed -->
+                </ul>
+            </nav>
+            <div class="svg-container">
                <svg width="200" height="200">...</svg>
            </div>
-
-
-      </aside>
+        </aside>
     </div>
-
 
     <footer>
         <p>© 2025 Your Website</p>

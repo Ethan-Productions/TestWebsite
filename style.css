@@ -215,3 +215,89 @@ aside nav a {
   padding: 5px 0;    /* Add some padding */
 
 }
+/* Basic Styling */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f8f8;
+}
+
+/* Wrapper for layout */
+.wrapper {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Main content and aside */
+  gap: 20px;
+  padding: 20px;
+}
+
+header, footer {
+  padding: 20px;
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+aside {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section Styling */
+section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative; /* For positioning draggable box */
+}
+
+section h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+
+
+/* ... (rest of your *provided* CSS styles - Multimedia, Text Formatting, etc.) ... */
+/*  Be sure to paste the rest of your original CSS here. */
+
+
+/* Aside Navigation -  add IDs to your section links*/
+aside nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside nav li {
+  margin-bottom: 5px;
+}
+
+aside nav a {
+  display: block;
+  padding: 5px 0;
+}
+
+/* Add styles for the new sections  -  important to match the IDs in the HTML*/
+#welcome, #draggable, #clock,  #text-formatting, #interactive-elements, #forms-inputs, #lists, #tables, #iframes {
+ /* Add any specific styles needed for these sections if they are different from the general section styles. */
+}
