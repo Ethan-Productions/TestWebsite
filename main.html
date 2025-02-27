@@ -4,6 +4,20 @@
     <title>Element Playground</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
+    <style>
+        /* Basic styling for the draggable box */
+        #draggable-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid black;
+            cursor: move;
+            text-align: center;
+            line-height: 100px;
+            position: relative; /* Needed for absolute positioning within */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,13 +50,6 @@
             <section id="canvas-fun">
                 <h2>Canvas Fun</h2>
                 <canvas id="myCanvas" width="300" height="200"></canvas>
-                <script>
-                    // Canvas drawing code (add more interactivity here!)
-                    var canvas = document.getElementById('myCanvas');
-                    var ctx = canvas.getContext('2d');
-                    ctx.fillStyle = 'rgb(200, 0, 0)';
-                    ctx.fillRect(10, 10, 50, 50);
-                </script>
             </section>
 
             <section id="multimedia">
@@ -148,7 +155,9 @@
                 </ul>
             </nav>
             <div class="svg-container">
-               <svg width="200" height="200">...</svg>
+               <svg width="200" height="200">
+                <rect width="100" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
+               </svg>
            </div>
         </aside>
     </div>
@@ -156,5 +165,66 @@
     <footer>
         <p>© 2025 Your Website</p>
     </footer>
+
+    <script>
+        // Draggable box functionality
+        const draggableBox = document.getElementById('draggable-box');
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        draggableBox.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - draggableBox.offsetLeft;
+            offsetY = e.clientY - draggableBox.offsetTop;
+            draggableBox.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const x = e.clientX - offsetX;
+            const y = e.clientY - offsetY;
+            draggableBox.style.left = x + 'px';
+            draggableBox.style.top = y + 'px';
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            draggableBox.style.cursor = 'move';
+        });
+
+         // Clock functionality
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Dark Mode Functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+         // Konami Code Easter Egg
+        let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        let konamiIndex = 0;
+        document.addEventListener('keydown', (event) => {
+            if (event.key === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    document.getElementById('konami-code-display').style.display = 'inline';
+                    konamiIndex = 0; 
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+    </script>
 </body>
 </html>

@@ -18,7 +18,8 @@ body {
   padding: 20px;
 }
 
-header, footer {
+header,
+footer {
   padding: 20px;
   background-color: #e0e0e0;
   text-align: center;
@@ -54,7 +55,6 @@ svg {
   margin: 0 auto;
 }
 
-
 /* Section Styling */
 section {
   background: #fff;
@@ -70,23 +70,24 @@ section h2 {
 }
 
 /* Multimedia */
-audio, video {
+audio,
+video {
   display: block;
   margin: 10px auto;
 }
 
 /* Text Formatting */
-pre, kbd {
+pre,
+kbd {
   background: #f5f5f5;
   padding: 10px;
   border-radius: 5px;
-  font-family: monospace; /* Use monospace font for <pre> and <kbd> */
+  font-family: monospace; /* Use monospace font for &lt;pre&gt; and &lt;kbd&gt; */
 }
 
 kbd {
-  display: inline-block;  /* So it doesn't take up the whole width */
-  padding: 2px 5px;       /* Smaller padding for <kbd> */
-
+  display: inline-block; /* So it doesn't take up the whole width */
+  padding: 2px 5px; /* Smaller padding for &lt;kbd&gt; */
 }
 mark {
   background-color: yellow;
@@ -97,7 +98,7 @@ mark {
 details summary {
   cursor: pointer;
   user-select: none;
-  padding: 5px;  /* Add some padding to the summary */
+  padding: 5px; /* Add some padding to the summary */
 }
 
 details[open] summary {
@@ -111,8 +112,9 @@ dialog {
   padding: 20px;
 }
 
-
-dialog button, button {  /* Style all buttons */
+dialog button,
+button {
+  /* Style all buttons */
   background-color: #007bff;
   color: white;
   padding: 8px 15px;
@@ -120,13 +122,13 @@ dialog button, button {  /* Style all buttons */
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-bottom: 10px;  /* Add some space below buttons */
+  margin-bottom: 10px; /* Add some space below buttons */
 }
 
-dialog button:hover, button:hover {
+dialog button:hover,
+button:hover {
   background-color: #0056b3;
 }
-
 
 /* Form Elements */
 form label {
@@ -142,10 +144,9 @@ select {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;  /* Include padding and border in element's total width and height */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
   margin-bottom: 10px;
 }
-
 
 input[type="color"],
 input[type="date"],
@@ -154,15 +155,15 @@ progress {
   margin-bottom: 10px;
 }
 
-
 /* Lists */
-ul, ol, dl {
-list-style-position: inside; /* Place bullet points/numbers inside the list */
-padding-left: 20px;        /* Indent the list items */
-
+ul,
+ol,
+dl {
+  list-style-position: inside; /* Place bullet points/numbers inside the list */
+  padding-left: 20px; /* Indent the list items */
 }
 dl dt {
-  font-weight: bold;  /* Style description terms */
+  font-weight: bold; /* Style description terms */
 }
 
 /* Tables */
@@ -172,7 +173,8 @@ table {
   margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
@@ -182,122 +184,33 @@ th {
   background-color: #f0f0f0; /* Light gray background for table headers */
 }
 
-
-
 /* Iframes */
 iframe {
   border: 0;
   display: block;
   margin: 0 auto; /* Center iframe */
-
 }
-
 
 /* Footer */
 footer {
   margin-top: 20px;
 }
 
-
 /* Aside Navigation */
 aside nav ul {
-  list-style: none;  /* Remove bullet points */
-  padding: 0;       /* Remove default padding */
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
 }
 
 aside nav li {
   margin-bottom: 5px; /* Space list items */
 }
 
-
 aside nav a {
-  display: block;   /* Make links fill the list item width */
-  padding: 5px 0;    /* Add some padding */
-
+  display: block; /* Make links fill the list item width */
+  padding: 5px 0; /* Add some padding */
 }
-/* Basic Styling */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: #f8f8f8;
-}
-
-/* Wrapper for layout */
-.wrapper {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 300px; /* Main content and aside */
-  gap: 20px;
-  padding: 20px;
-}
-
-header, footer {
-  padding: 20px;
-  background-color: #e0e0e0;
-  text-align: center;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #007bff;
-}
-
-aside {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Section Styling */
-section {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  position: relative; /* For positioning draggable box */
-}
-
-section h2 {
-  color: #333;
-  margin-top: 0;
-}
-
-
-
-/* ... (rest of your *provided* CSS styles - Multimedia, Text Formatting, etc.) ... */
-/*  Be sure to paste the rest of your original CSS here. */
-
-
-/* Aside Navigation -  add IDs to your section links*/
-aside nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-aside nav li {
-  margin-bottom: 5px;
-}
-
-aside nav a {
-  display: block;
-  padding: 5px 0;
-}
-
-/* Add styles for the new sections  -  important to match the IDs in the HTML*/
-#welcome, #draggable, #clock,  #text-formatting, #interactive-elements, #forms-inputs, #lists, #tables, #iframes {
- /* Add any specific styles needed for these sections if they are different from the general section styles. */
+body.dark-mode {
+  background-color: #333;
+  color: #eee;
 }
